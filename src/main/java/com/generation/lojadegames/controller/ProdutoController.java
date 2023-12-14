@@ -73,7 +73,7 @@ public class ProdutoController {
 	public void delete(@PathVariable Long id) {
 		Optional<Categoria> categoria = categoriaRepository.findById(id);
 
-		if (categoria.isEmpty())
+		if (categoria.isEmpty()) 
 			throw new ResponseStatusException(HttpStatus.NOT_FOUND);
 
 		categoriaRepository.deleteById(id);
