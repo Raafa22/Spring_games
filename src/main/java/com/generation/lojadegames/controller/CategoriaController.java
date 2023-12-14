@@ -40,12 +40,7 @@ public class CategoriaController {
 		        return categoriaRepository.findById(id)
 		            .map(resposta -> ResponseEntity.ok(resposta)) // achar pelo id puxar 
 		            .orElse(ResponseEntity.status(HttpStatus.NOT_FOUND).build()); // nao achar pelo id dar mensagem de erro 
-		    }
-		  @GetMapping("/titulo/{titulo}")//buscar por titulo no sql
-			public ResponseEntity<List<Categoria>> getByTitulo(@PathVariable String titulo){
-				return ResponseEntity.ok(categoriaRepository.findAllByTituloContainingIgnoreCase(titulo));
-			}
-			
+		    }		  
 		
 			@PostMapping //criar categoria
 			public ResponseEntity<Categoria> post (@Valid @RequestBody Categoria categoria) {

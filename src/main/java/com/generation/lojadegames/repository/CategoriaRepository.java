@@ -7,5 +7,7 @@ import com.generation.lojadegames.model.Categoria;
 
 @Repository
 public interface CategoriaRepository extends JpaRepository<Categoria, Long> {
+	
+	
 
 }
